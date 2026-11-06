@@ -45,6 +45,7 @@ class Admin:
     user_id: int
     name: str
 
+@dataclass
 class Settings:
     bot_token: str = field(repr=False)
     database_url: str = field(repr=False)
