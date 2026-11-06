@@ -38,6 +38,9 @@ def validate_schema_name(name: str) -> str:
 class ConfigError(Exception):
     """خطأ في الإعدادات (رسالته بالعربية وواضحة للمستخدم)."""
 
+from dataclasses import dataclass
+
+@dataclass
 class Admin:
     user_id: int
     name: str
