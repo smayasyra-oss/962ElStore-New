@@ -38,8 +38,6 @@ def validate_schema_name(name: str) -> str:
 class ConfigError(Exception):
     """خطأ في الإعدادات (رسالته بالعربية وواضحة للمستخدم)."""
 
-from dataclasses import dataclass
-
 @dataclass
 class Admin:
     user_id: int
@@ -391,6 +389,7 @@ _LOCK_BASE = 962_000_000
 class MigrationError(Exception):
     pass
 
+@dataclass
 class Migration:
     version: int
     name: str
